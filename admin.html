@@ -1,0 +1,69 @@
+<?php include 'session_check.php'; ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Administrateur - Zoo Arcadia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="habitats.html">Habitats</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Espace Administrateur</h1>
+    </header>
+
+    <section id="create-user">
+        <h2>Créer un compte utilisateur</h2>
+        <form id="create-user-form" action="create_user.php" method="POST">
+            <label for="email">Courriel:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="role">Rôle:</label>
+            <select id="role" name="role" required>
+                <option value="employe">Employé</option>
+                <option value="veterinaire">Vétérinaire</option>
+            </select>
+            
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Créer le compte</button>
+        </form>
+    </section>
+
+    <section id="manage-content">
+        <h2>Gérer le contenu du zoo</h2>
+        <!-- Ajouter des liens ou des formulaires pour gérer les services, horaires, habitats et animaux -->
+    </section>
+
+    <section id="veterinary-reports">
+        <h2>Comptes rendus vétérinaires</h2>
+        <!-- Filtres pour trier et filtrer les comptes rendus -->
+        <form id="filter-reports-form">
+            <label for="animal-filter">Filtrer par animal:</label>
+            <input type="text" id="animal-filter" name="animal-filter">
+            
+            <label for="date-filter">Filtrer par date:</label>
+            <input type="date" id="date-filter" name="date-filter">
+            
+            <button type="button" onclick="filterReports()">Filtrer</button>
+        </form>
+        <div id="reports-container">
+            <!-- Les comptes rendus seront affichés ici -->
+        </div>
+    </section>
+
+    <script src="admin.js"></script>
+</body>
+</html>

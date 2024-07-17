@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Arcadia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="habitats.html">Habitats</a></li> <!-- Lien ajouté -->
+            <li><a href="#services">Services</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    
+    <header>
+        <h1>Bienvenue au Zoo Arcadia</h1>
+        <p>Découvrez notre zoo écologique situé près de la forêt de Brocéliande, en Bretagne.</p>
+    </header>
+    
+    <section id="presentation">
+        <h2>Présentation du Zoo</h2>
+        <p>Le Zoo Arcadia est un lieu magique où vous pouvez découvrir des animaux fascinants dans des habitats recréés pour leur bien-être.</p>
+        <img src="images/zoo1.jpg" alt="Image du zoo">
+        <img src="images/zoo2.jpg" alt="Image du zoo">
+    </section>
+
+    <section id="habitats">
+        <h2>Nos Habitats</h2>
+        <ul>
+            <li><a href="habitats.html#savane">Savane</a></li>
+            <li><a href="habitats.html#jungle">Jungle</a></li>
+            <li><a href="habitats.html#marais">Marais</a></li>
+        </ul>
+    </section>
+    
+
+    <section id="services">
+        <h2>Nos Services</h2>
+        <div class="service">
+            <h3>Restauration</h3>
+            <p>Profitez de nos restaurants et cafés pour vous restaurer pendant votre visite.</p>
+        </div>
+        <div class="service">
+            <h3>Visite des habitats avec un guide (gratuit)</h3>
+            <p>Découvrez les secrets de nos animaux et de leurs habitats grâce à nos guides passionnés.</p>
+        </div>
+        <div class="service">
+            <h3>Visite du zoo en petit train</h3>
+            <p>Parcourez le zoo confortablement installé dans notre petit train.</p>
+        </div>
+    </section>
+    
+
+    <section id="animaux">
+        <h2>Nos Animaux</h2>
+        <ul>
+            <li>Lions</li>
+            <li>Tigres</li>
+            <li>Hippopotames</li>
+            <li>Zèbres</li>
+        </ul>
+    </section>
+
+    <section id="avis">
+        <h2>Laissez un avis</h2>
+        <form id="avis-form" action="submit_avis.php" method="POST">
+            <label for="pseudo">Pseudo:</label>
+            <input type="text" id="pseudo" name="pseudo" required>
+            
+            <label for="commentaire">Avis:</label>
+            <textarea id="commentaire" name="commentaire" required></textarea>
+            
+            <button type="submit">Soumettre</button>
+        </form>
+    </section>
+    
+    <section id="avis-approuves">
+        <h2>Avis des visiteurs</h2>
+        <div id="avis-container">
+            <!-- Les avis approuvés seront insérés ici par JavaScript -->
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

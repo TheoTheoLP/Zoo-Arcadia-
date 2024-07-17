@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+#presentation img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0.5rem;
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e0e0e0;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+#avis .avis {
+    background: #e0e0e0;
+    margin: 0.5rem 0;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+#services .service {
+    background: #e0e0e0;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#services .service h3 {
+    margin-top: 0;
+}
+
+#services .service p {
+    margin: 0.5rem 0 0 0;
+}
+
+#habitats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.habitat {
+    margin: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.habitat img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#habitat-details {
+    padding: 2rem;
+}
+
+#habitat-details button {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#avis {
+    margin-top: 2rem;
+}
+
+#avis form {
+    display: flex;
+    flex-direction: column;
+}
+
+#avis label {
+    margin: 0.5rem 0 0.2rem 0;
+}
+
+#avis input, #avis textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#avis button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#avis button:hover {
+    background-color: #575757;
+}

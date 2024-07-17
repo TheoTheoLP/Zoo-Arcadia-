@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitats du Zoo Arcadia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="habitats.html">Habitats</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <header>
+        <h1>Nos Habitats</h1>
+    </header>
+    
+    <section id="habitats">
+        <div class="habitat" onclick="showHabitatDetails('savane')">
+            <img src="images/savane.jpg" alt="Savane">
+            <h3>Savane</h3>
+        </div>
+        <div class="habitat" onclick="showHabitatDetails('jungle')">
+            <img src="images/jungle.jpg" alt="Jungle">
+            <h3>Jungle</h3>
+        </div>
+        <div class="habitat" onclick="showHabitatDetails('marais')">
+            <img src="images/marais.jpg" alt="Marais">
+            <h3>Marais</h3>
+        </div>
+    </section>
+
+    <section id="habitat-details" style="display: none;">
+        <button onclick="hideHabitatDetails()">Retour</button>
+        <div id="habitat-info"></div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

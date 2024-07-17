@@ -1,0 +1,71 @@
+<?php include 'session_check.php'; ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Employé - Zoo Arcadia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="habitats.html">Habitats</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="employee.html">Employé</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Espace Employé</h1>
+    </header>
+
+    <section id="validate-reviews">
+        <h2>Valider ou invalider les avis</h2>
+        <div id="reviews-container">
+            <!-- Les avis seront affichés ici -->
+        </div>
+    </section>
+
+    <section id="manage-services">
+        <h2>Modifier les services</h2>
+        <!-- Formulaire pour modifier les services -->
+        <form id="service-form" action="update_service.php" method="POST">
+            <label for="service-name">Nom du service:</label>
+            <input type="text" id="service-name" name="service-name" required>
+            
+            <label for="service-description">Description du service:</label>
+            <textarea id="service-description" name="service-description" required></textarea>
+            
+            <button type="submit">Mettre à jour le service</button>
+        </form>
+    </section>
+
+    <section id="animal-feeding">
+        <h2>Ajouter une consommation de nourriture</h2>
+        <form id="feeding-form" action="add_feeding.php" method="POST">
+            <label for="animal-name">Nom de l'animal:</label>
+            <input type="text" id="animal-name" name="animal-name" required>
+            
+            <label for="feeding-date">Date:</label>
+            <input type="date" id="feeding-date" name="feeding-date" required>
+            
+            <label for="feeding-time">Heure:</label>
+            <input type="time" id="feeding-time" name="feeding-time" required>
+            
+            <label for="food">Nourriture:</label>
+            <input type="text" id="food" name="food" required>
+            
+            <label for="quantity">Quantité (en grammes):</label>
+            <input type="number" id="quantity" name="quantity" required>
+            
+            <button type="submit">Ajouter la consommation</button>
+        </form>
+    </section>
+
+    <script src="employee.js"></script>
+</body>
+</html>

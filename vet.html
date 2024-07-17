@@ -1,0 +1,78 @@
+<?php include 'session_check.php'; ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Vétérinaire - Zoo Arcadia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="habitats.html">Habitats</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="vet.html">Vétérinaire</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Espace Vétérinaire</h1>
+    </header>
+
+    <section id="animal-reports">
+        <h2>Comptes rendus des animaux</h2>
+        <form id="report-form" action="add_report.php" method="POST">
+            <label for="animal-name">Nom de l'animal:</label>
+            <input type="text" id="animal-name" name="animal-name" required>
+            
+            <label for="animal-state">État de l'animal:</label>
+            <textarea id="animal-state" name="animal-state" required></textarea>
+            
+            <label for="food-given">Nourriture donnée:</label>
+            <input type="text" id="food-given" name="food-given" required>
+            
+            <label for="food-quantity">Quantité (en grammes):</label>
+            <input type="number" id="food-quantity" name="food-quantity" required>
+            
+            <label for="visit-date">Date de passage:</label>
+            <input type="date" id="visit-date" name="visit-date" required>
+            
+            <label for="details">Détail de l'état de l'animal (optionnel):</label>
+            <textarea id="details" name="details"></textarea>
+            
+            <button type="submit">Ajouter le compte rendu</button>
+        </form>
+    </section>
+
+    <section id="habitat-comments">
+        <h2>Commentaires sur les habitats</h2>
+        <form id="habitat-comment-form" action="add_habitat_comment.php" method="POST">
+            <label for="habitat-name">Nom de l'habitat:</label>
+            <input type="text" id="habitat-name" name="habitat-name" required>
+            
+            <label for="habitat-comment">Commentaire:</label>
+            <textarea id="habitat-comment" name="habitat-comment" required></textarea>
+            
+            <button type="submit">Ajouter le commentaire</button>
+        </form>
+    </section>
+
+    <section id="animal-feedings">
+        <h2>Consommations de nourriture par animal</h2>
+        <form id="feeding-query-form" action="get_feedings.php" method="GET">
+            <label for="query-animal-name">Nom de l'animal:</label>
+            <input type="text" id="query-animal-name" name="animal-name" required>
+            
+            <button type="submit">Voir les consommations</button>
+        </form>
+        <div id="feedings-container">
+            <!-- Les consommations de nourriture seront affichées ici -->
+        </div>
+    </section>
+
+    <script src="vet.js"></script>
+</body>
+</html>
